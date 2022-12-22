@@ -11,11 +11,12 @@ class UuidApplicationTests2 {
 
 	@Test
 	void contextLoads() {
+		System.out.println(1);
 	}
 
 	@Test
 	void someTest(){
-
+		System.out.println(2);
 
 
 
