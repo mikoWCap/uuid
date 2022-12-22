@@ -13,6 +13,8 @@ class UuidApplicationTests2 {
 
 	@Test
 	void someTest(){
+
+
 	}
 
 }
