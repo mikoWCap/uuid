@@ -19,6 +19,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Tests with Maven
-      run: mvn -DtestSourceDirectory=src/test/java clean test
+      run: mvn -DtestSourceDirectory=src/test/java test
     - name: Build with Maven
       run: mvn -B package --file pom.xml
