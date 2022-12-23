@@ -23,7 +23,7 @@ jobs:
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
       - name: echo commit message
-        run: echo "${{ github.event.workflow_run.head_commit.message }}"
+        run: echo "${{ github.event.action }}"
       - name: print all event
         run: echo "${{toJSON(github.event)}}"
       - name: Build with Maven
