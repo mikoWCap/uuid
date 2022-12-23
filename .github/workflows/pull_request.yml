@@ -22,7 +22,7 @@ jobs:
       - name: Publish Test Report
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
-      - name: echo commit message
+      - name: echo $(git log -1 --pretty=format:"%s")
         run: echo ${{ github.event.commits[0].message }}
       - name: Build with Maven
         run: mvn -B package --file pom.xml
