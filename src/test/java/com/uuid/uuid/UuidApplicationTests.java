@@ -11,6 +11,8 @@ class UuidApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+
 	}
 
 }
