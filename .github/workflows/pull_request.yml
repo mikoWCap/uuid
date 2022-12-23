@@ -18,9 +18,10 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Tests with Maven
-        run: mvn -B test --file pom.xml --log-file log.txt
-      - name: Run Maven file
-        run: cat log.txt
+        run: mvn test --batch-mode --fail-at-end
+      - name: Publish Test Report
+        if: ${{ always() }}
+        uses: scacap/action-surefire-report@v1
       - name: echo commit message
         run: echo ${{ github.event.head_commit.message }}
       - name: Build with Maven
