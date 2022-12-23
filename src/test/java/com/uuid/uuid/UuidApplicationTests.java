@@ -17,4 +17,17 @@ class UuidApplicationTests {
 
 	}
 
+	@Test
+	void contextLoad2s() {
+		System.out.println(1);
+	}
+
+	@Test
+	void someTest(){
+		System.out.println(2);
+
+
+
+	}
+
 }
