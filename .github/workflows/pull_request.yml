@@ -23,7 +23,7 @@ jobs:
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
       - name: echo $(git log -1 --pretty=format:"%s")
-        run: echo ${{ github.event.commits[0].message }}
+        run: echo $(git log -1 --pretty=format:"%s")
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Add comment to PR
