@@ -21,7 +21,7 @@ jobs:
         run: mvn -B test --file pom.xml --log-file log.txt
       - name: Run Maven file
         run: cat log.txt
-      - name: Run Maven file
+      - name: echo commit message
         run: echo ${{ github.event.head_commit.message }}
       - name: Build with Maven
         run: mvn -B package --file pom.xml
@@ -36,4 +36,4 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": " $(COMMIT_MESSAGE) successfully passed tests" }'
+            --data '{ "body": " $COMMIT_MESSAGE successfully passed tests" }'
