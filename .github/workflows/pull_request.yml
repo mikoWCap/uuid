@@ -22,8 +22,8 @@ jobs:
       - name: Publish Test Report
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
-      - name: echo $(git log -1 --pretty=format:"%s")
-        run: echo $(git log -1 --pretty=format:"%s")
+      - name: echo commit message
+        run: echo "${{ github.event.head_commit.message }}"
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Add comment to PR
