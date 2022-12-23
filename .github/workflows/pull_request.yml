@@ -18,7 +18,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Tests with Maven
-        run: mvn test --batch-mode --fail-at-end
+        run: mvn -DtestSourceDirectory=src/test/java test --batch-mode --fail-at-end
       - name: Publish Test Report
         if: ${{ always() }}
         uses: scacap/action-surefire-report@v1
