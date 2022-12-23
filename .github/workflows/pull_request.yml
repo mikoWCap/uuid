@@ -24,11 +24,12 @@ jobs:
       - name: Add comment to PR
         env:
           URL: ${{ github.event.pull_request.comments_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           curl \
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": "echo '${{ github.event.head_commit.message }}' successfully passed tests" }'
+            --data '{ "body": "$COMMIT_MESSAGE successfully passed tests" }'
