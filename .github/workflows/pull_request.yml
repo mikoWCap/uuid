@@ -20,7 +20,7 @@ jobs:
       - name: Tests with Maven
         run: mvn -B test --file pom.xml --log-file log.txt
       - name: Run Maven file
-          run: cat log.txt
+        run: cat log.txt
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Add comment to PR
