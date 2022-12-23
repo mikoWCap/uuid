@@ -24,6 +24,8 @@ jobs:
         uses: scacap/action-surefire-report@v1
       - name: echo commit message
         run: echo "${{ github.event.head_commit.message }}"
+      - name: print all event
+        run: echo "${{toJSON(github.event)}}"
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Add comment to PR
