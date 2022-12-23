@@ -20,6 +20,7 @@ class UuidApplicationTests {
 	@Test
 	void contextLoad2s() {
 		System.out.println(1);
+
 	}
 
 	@Test
