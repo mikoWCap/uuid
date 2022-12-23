@@ -7,7 +7,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 @ActiveProfiles("test")
 @SpringBootTest
-class UuidApplicationTests2 {
+class SomeTestClass {
 
 	@Test
 	void contextLoads() {
