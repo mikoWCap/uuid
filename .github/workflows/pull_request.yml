@@ -30,7 +30,7 @@ jobs:
         env:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMIT_MESSAGE: ${{ github.event}}
+          COMMIT_MESSAGE: ${{ github.event.commits[0].message}}
         run: |
           curl \
             -X POST \
