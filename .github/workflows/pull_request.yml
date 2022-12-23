@@ -31,4 +31,4 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": "${{ github.event.head_commit.message }} successfully passed tests" }'
+            --data '{ "body": "echo '${{ github.event.head_commit.message }}' successfully passed tests" }'
