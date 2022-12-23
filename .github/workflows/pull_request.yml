@@ -32,4 +32,4 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": " $COMMIT_MESSAGE successfully passed tests" }'
+            --data '{ "body": " '$COMMIT_MESSAGE' successfully passed tests" }'
